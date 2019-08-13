@@ -2,6 +2,7 @@ import React from 'react';
 import {
   AboutPage,
   AuthenticationPage,
+  BlogPage,
   CheckoutPage,
   ContactDetailsPage,
   EditListingPage,
@@ -55,6 +56,11 @@ const routeConfiguration = () => {
       path: '/about',
       name: 'AboutPage',
       component: AboutPage,
+    },
+    {
+      path: '/blog',
+      name: 'BlogPage',
+      component: BlogPage,
     },
     {
       path: '/s',
