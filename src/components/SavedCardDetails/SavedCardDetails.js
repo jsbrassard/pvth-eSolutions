@@ -118,6 +118,9 @@ const SavedCardDetails = props => {
   const arrowStyle = {
     transform: `rotate(${arrowDeg}deg)`,
     transition: 'transform 0.5s ease-out',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   };
 
   const replaceCardTitle = intl.formatMessage({
@@ -135,7 +138,7 @@ const SavedCardDetails = props => {
 
   return (
     <div className={classes}>
-      <Menu className={css.menu} isOpen={menuOpen} onToggleActive={onToggleActive}>
+      <Menu className={css.menu} isOpen={menuOpen} onToggleActive={onToggleActive} useArrow={false}>
         <MenuLabel className={css.menuLabel}>
           <div className={showExpired ? css.menuLabelWrapperExpired : css.menuLabelWrapper}>
             {active === DEFAULT_CARD ? defaultCard : replaceCard}
